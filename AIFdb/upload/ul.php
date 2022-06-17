@@ -29,15 +29,10 @@ if(move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $target_path)) {
         curl_setopt($ch, CURLOPT_HTTPHEADER, array("Cookie: XDEBUG_SESSION=XDEBUG_ECLIPSE;"));
 
         $post = array(
-            // "file"=>"@".$target_path,
-            "file"=>new CURLFile(realpath($target_path),'application/json','test_name')
+            //"file"=>"@".$target_path,
+            "file"=>new CURLFile(realpath($target_path),'application/json')
         );
         curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-
-        // ADDED: NEW WAY TO UPLOAD FILES
-//        $cfile = new CURLFile(realpath($target_path),'application/json','test_name');
-//        $data = array('file' => $cfile);
-//        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
 
         //$response = curl_exec($ch);
         if( ! $result = curl_exec($ch)) {
