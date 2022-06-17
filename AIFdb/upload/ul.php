@@ -1,6 +1,7 @@
 <?php
 
-$host = 'www.aifdb.org';
+//$host = 'www.aifdb.org';
+$host = 'localhost';
 $db = '/';
 
 $target_path = "tmp/";
@@ -8,6 +9,7 @@ $fname = basename($_FILES['uploadedfile']['name']);
 $target_path = $target_path . $fname; 
 
 if(move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $target_path)) {
+
     if($_POST['ftype'] == "aml"){
         require_once('amlparse/AmlAif.php');
         $a = new AmlAif(file_get_contents($target_path),$host,$db,'test','pass');
@@ -20,16 +22,27 @@ if(move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $target_path)) {
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/4.0 (compatible;)");
         curl_setopt($ch, CURLOPT_URL, "http://$host$db".$_POST['ftype']."/");
-        curl_setopt($ch, CURLOPT_USERPWD,"test:pass"); 
+        curl_setopt($ch, CURLOPT_USERPWD,"test:pass");
         curl_setopt($ch, CURLOPT_POST, true);
+
+        // Added for debugging
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array("Cookie: XDEBUG_SESSION=XDEBUG_ECLIPSE;"));
+
         $post = array(
-            "file"=>"@".$target_path,
+            // "file"=>"@".$target_path,
+            "file"=>new CURLFile(realpath($target_path),'application/json','test_name')
         );
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $post); 
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+
+        // ADDED: NEW WAY TO UPLOAD FILES
+//        $cfile = new CURLFile(realpath($target_path),'application/json','test_name');
+//        $data = array('file' => $cfile);
+//        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+
         //$response = curl_exec($ch);
         if( ! $result = curl_exec($ch)) {
             trigger_error(curl_error($ch)); 
-        } 
+        }
         curl_close($ch);
         echo $result;
     }

@@ -49,7 +49,8 @@ class JsonAction extends Action {
                     }
                 }
 
-        $this->virtuoso($nodesetId);
+                // Appears non-critical to uploading a nodeset to local database
+//        $this->virtuoso($nodesetId);
 
                 $rdetail = array('nodeSetID' => $nodesetId, 'mappings' => $idmaps, 'partadd' => $p_added);
                 $rdj = json_encode($rdetail);
