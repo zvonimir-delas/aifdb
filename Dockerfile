@@ -22,7 +22,3 @@ RUN mkdir /var/www/html/upload/tmp
 RUN chmod 777 /var/www/html/upload/tmp
 RUN mkdir /var/www/html/tmp
 RUN chmod 777 /var/www/html/tmp
-
-# Newly added for debugging
-RUN touch /var/www/html/php-scripts.log
-RUN chmod 777 /var/www/html/php-scripts.log
