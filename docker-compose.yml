@@ -11,6 +11,8 @@ services:
    MYSQL_HOST: 'arg-tech-aifdb_mysql'
    MYSQL_USER: 'root'
    MYSQL_PASSWORD: '@rgtech'
+  volumes:
+  - ./AIFdb:/var/www/html
 
  mysql:
   build: ./mysql

@@ -1,0 +1,4 @@
+# Ignore everything in this directory
+# Except this file
+# This folder has to be manually created if code volume binding is on (in docker-compose.yml)
+!.gitignore
