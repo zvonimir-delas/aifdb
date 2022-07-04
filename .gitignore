@@ -1,1 +1,3 @@
 AIFdb/.idea/
+AIFdb/tmp/*
+AIFdb/upload/tmp/*
