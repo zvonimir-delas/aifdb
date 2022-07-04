@@ -139,6 +139,10 @@ class DiagramAction extends Action {
         }else{
             $node_out .= $node->text;
         }
+
+        // Temporarily added to easily identify nodes in diagrams
+        $node_out .= " (" . $node->nodeID . "-" . $node->type . ")";
+
         $node_out .= '", shape="';
         $node_out .= ($node->type=="I" || $node->type=="L") ? 'box' : 'diamond';
         $node_out .= '", style=filled, ';
