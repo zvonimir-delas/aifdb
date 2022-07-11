@@ -1,0 +1,141 @@
+{
+"AIF": {    
+"nodes": [
+        {
+            "nodeID": "58779",
+            "text": "a tweet is fundamentally valueless",
+            "type": "I",
+            "timestamp": "2015-03-12 21:56:20"
+        },
+        {
+            "nodeID": "58785",
+            "text": "POSTER_1: a tweet is fundamentally valueless",
+            "type": "L",
+            "timestamp": "2015-03-12 21:56:20"
+        },
+        {
+            "nodeID": "59039",
+            "text": "Calling Out",
+            "type": "CA",
+            "timestamp": "2015-03-12 21:56:44",
+            "scheme": "Calling Out",
+            "schemeID": "146"
+        },
+        {
+            "nodeID": "59040",
+            "text": "Twitter is highly valuable from an SEO and Aggregation standpoint. Link all of your Social accounts (Facebook, Twitter, Flickr, Friendfeed, etc) together with Applications, and remove the silo effect.",
+            "type": "I",
+            "timestamp": "2015-03-12 21:56:44"
+        },
+        {
+            "nodeID": "59041",
+            "text": "YA",
+            "type": "YA",
+            "timestamp": "2015-03-12 21:56:44"
+        },
+        {
+            "nodeID": "59042",
+            "text": "YA",
+            "type": "YA",
+            "timestamp": "2015-03-12 21:56:44"
+        },
+        {
+            "nodeID": "59043",
+            "text": "YA",
+            "type": "YA",
+            "timestamp": "2015-03-12 21:56:44"
+        },
+        {
+            "nodeID": "59044",
+            "text": "TA",
+            "type": "TA",
+            "timestamp": "2015-03-12 21:56:44"
+        },
+        {
+            "nodeID": "59045",
+            "text": "USER_27: Twitter is highly valuable from an SEO and Aggregation standpoint. Link all of your Social accounts (Facebook, Twitter, Flickr, Friendfeed, etc) together with Applications, and remove the silo effect.",
+            "type": "L",
+            "timestamp": "2015-03-12 21:56:44"
+        }
+    ],
+    "edges": [
+        {
+            "edgeID": "81653",
+            "fromID": "59040",
+            "toID": "59039",
+            "formEdgeID": null
+        },
+        {
+            "edgeID": "81654",
+            "fromID": "59039",
+            "toID": "58779",
+            "formEdgeID": null
+        },
+        {
+            "edgeID": "81655",
+            "fromID": "59041",
+            "toID": "58779",
+            "formEdgeID": null
+        },
+        {
+            "edgeID": "81656",
+            "fromID": "59042",
+            "toID": "59039",
+            "formEdgeID": null
+        },
+        {
+            "edgeID": "81657",
+            "fromID": "59043",
+            "toID": "59040",
+            "formEdgeID": null
+        },
+        {
+            "edgeID": "81658",
+            "fromID": "58785",
+            "toID": "59041",
+            "formEdgeID": null
+        },
+        {
+            "edgeID": "81659",
+            "fromID": "59044",
+            "toID": "59042",
+            "formEdgeID": null
+        },
+        {
+            "edgeID": "81660",
+            "fromID": "59045",
+            "toID": "59043",
+            "formEdgeID": null
+        },
+        {
+            "edgeID": "81661",
+            "fromID": "58785",
+            "toID": "59044",
+            "formEdgeID": null
+        },
+        {
+            "edgeID": "81662",
+            "fromID": "59044",
+            "toID": "59045",
+            "formEdgeID": null
+        }
+    ],
+    "locutions": [
+        {
+            "nodeID": "58785",
+            "personID": "649",
+            "timestamp": "2015-03-12 21:56:21",
+            "start": null,
+            "end": null,
+            "source": null
+        },
+        {
+            "nodeID": "59045",
+            "personID": "698",
+            "timestamp": "2015-03-12 21:56:45",
+            "start": null,
+            "end": null,
+            "source": null
+        }
+    ]
+}}

@@ -1,8 +1,97 @@
+// Note: should be secured against SQL injection
 <?php
 
 $host = "localhost";
 
-// Note: should be secured against SQL injection
+// Manually get JSON file (for use in dev)
+$json_file = dirname(__FILE__).'/test-files-temp/twitter-3915-in-xAIF.json';
+$jsondata = file_get_contents($json_file);
+$json = json_decode($jsondata);
+
+$nodes = $json->AIF->nodes;
+$edges = $json->AIF->edges;
+
+$nodes = array();
+foreach ($json->AIF->nodes as $node) {
+    $obj = (object)array(
+        'nodeID' => $node->nodeID,
+        'text' => $node->text,
+        'type' => $node->type,
+        'edges' => array(),
+        'visited' => false,
+        'diversion_point' => false);
+
+    $nodes[$obj->nodeID] = $obj;
+}
+
+foreach ($json->AIF->edges as $edge) {
+    $nodes[$edge->fromID]->edges[] = $edge;
+    $nodes[$edge->toID]->edges[] = $edge;
+}
+
+$edges = array();
+foreach ($json->AIF->edges as $edge) {
+    $obj = (object)array(
+        'edgeID' => $edge->edgeID,
+        'visited' => false);
+
+    $edges[$obj->edgeID] = $obj;
+}
+
+$lastEdge = null;
+$paths = array();
+$diversionPoints[58785] = $nodes[58785];
+
+$test = array(1,2,3);
+foreach ($test as $tt) {
+    $keys = array_keys($test);
+    unset($test[2]);
+}
+
+for ($i = 0; $i < count($diversionPoints); $i++) {
+
+//    $diversionPointsKeys = array_keys($diversionPoints);
+//    $currentNode = $diversionPoints[$diversionPointsKeys[$i]];
+
+    $tmp = array_values($diversionPoints);
+    $currentNode = array_values($diversionPoints)[$i];
+    $currentPath = array();
+
+    while ($currentNode != null) {
+
+        if ($lastEdge != null)
+            $edges[$lastEdge->edgeID]->visited = true;
+
+        $currentPath[] = $currentNode;
+
+        $nextNode = null;
+        $unvisitedEdgesCount = 0;
+        foreach ($currentNode->edges as $edge) {
+            if (!($edges[$edge->edgeID]->visited)) {
+                $lastEdge = $edges[$edge->edgeID];
+                $unvisitedEdgesCount++;
+
+                $nextNode = $nodes[$edge->fromID];
+                if ($nextNode == $currentNode)
+                    $nextNode = $nodes[$edge->toID];
+            }
+        }
+
+        if ($unvisitedEdgesCount > 1) {
+            $currentNode->diversion_point = true;
+            $diversionPoints[$currentNode->nodeID] = $currentNode;
+        }
+        else if ($unvisitedEdgesCount == 0) {
+            $currentNode->diversion_point = false;
+            // TODO: what if the element isn't in the array
+            unset($diversionPoints[$currentNode->nodeID]);
+        }
+
+        $currentNode = $nextNode;
+    }
+
+    $paths[] = $currentPath;
+}
 
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 $mysqli = new mysqli("arg-tech-aifdb_mysql:3306", "root", "@rgtech", "aifdb");
