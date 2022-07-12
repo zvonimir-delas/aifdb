@@ -1,0 +1,68 @@
+[12-Jul-2022 14:42:13 UTC] PHP Notice:  Trying to get property of non-object in /var/www/html/runTestQuery.php on line 96
+[12-Jul-2022 14:42:13 UTC] PHP Notice:  Trying to get property of non-object in /var/www/html/runTestQuery.php on line 96
+[12-Jul-2022 14:42:13 UTC] PHP Notice:  Trying to get property of non-object in /var/www/html/runTestQuery.php on line 96
+[12-Jul-2022 14:42:19 UTC] PHP Fatal error:  Uncaught exception 'mysqli_sql_exception' with message 'Table 'aifdb.diversion_table_58785' doesn't exist' in /var/www/html/runTestQuery.php:239
+Stack trace:
+#0 /var/www/html/runTestQuery.php(239): mysqli->query('\r\n             ...')
+#1 {main}
+  thrown in /var/www/html/runTestQuery.php on line 239
+[12-Jul-2022 14:43:32 UTC] PHP Notice:  Trying to get property of non-object in /var/www/html/runTestQuery.php on line 96
+[12-Jul-2022 14:43:32 UTC] PHP Notice:  Trying to get property of non-object in /var/www/html/runTestQuery.php on line 96
+[12-Jul-2022 14:43:32 UTC] PHP Notice:  Trying to get property of non-object in /var/www/html/runTestQuery.php on line 96
+[12-Jul-2022 14:45:45 UTC] PHP Notice:  Trying to get property of non-object in /var/www/html/runTestQuery.php on line 96
+[12-Jul-2022 14:45:45 UTC] PHP Notice:  Trying to get property of non-object in /var/www/html/runTestQuery.php on line 96
+[12-Jul-2022 14:45:45 UTC] PHP Notice:  Trying to get property of non-object in /var/www/html/runTestQuery.php on line 96
+[12-Jul-2022 14:45:45 UTC] PHP Notice:  Trying to get property of non-object in /var/www/html/runTestQuery.php on line 96
+[12-Jul-2022 14:45:45 UTC] PHP Notice:  Trying to get property of non-object in /var/www/html/runTestQuery.php on line 96
+[12-Jul-2022 14:45:45 UTC] PHP Notice:  Trying to get property of non-object in /var/www/html/runTestQuery.php on line 96
+[12-Jul-2022 14:45:46 UTC] PHP Fatal error:  Uncaught exception 'mysqli_sql_exception' with message 'Table 'diversion_table_example' already exists' in /var/www/html/runTestQuery.php:119
+Stack trace:
+#0 /var/www/html/runTestQuery.php(119): mysqli->query('CREATE TABLE di...')
+#1 {main}
+  thrown in /var/www/html/runTestQuery.php on line 119
+[12-Jul-2022 14:45:57 UTC] PHP Fatal error:  Uncaught exception 'mysqli_sql_exception' with message 'Unknown column 'd.nodeSetID' in 'on clause'' in /var/www/html/runTestQuery.php:239
+Stack trace:
+#0 /var/www/html/runTestQuery.php(239): mysqli->query('\r\n             ...')
+#1 {main}
+  thrown in /var/www/html/runTestQuery.php on line 239
+[12-Jul-2022 14:49:58 UTC] PHP Notice:  Trying to get property of non-object in /var/www/html/runTestQuery.php on line 96
+[12-Jul-2022 14:49:58 UTC] PHP Notice:  Trying to get property of non-object in /var/www/html/runTestQuery.php on line 96
+[12-Jul-2022 14:49:58 UTC] PHP Notice:  Trying to get property of non-object in /var/www/html/runTestQuery.php on line 96
+[12-Jul-2022 14:50:03 UTC] PHP Fatal error:  Uncaught exception 'mysqli_sql_exception' with message 'Column count doesn't match value count at row 1' in /var/www/html/runTestQuery.php:242
+Stack trace:
+#0 /var/www/html/runTestQuery.php(242): mysqli->query('\r\n             ...')
+#1 {main}
+  thrown in /var/www/html/runTestQuery.php on line 242
+[12-Jul-2022 14:52:14 UTC] PHP Notice:  Trying to get property of non-object in /var/www/html/runTestQuery.php on line 96
+[12-Jul-2022 14:52:14 UTC] PHP Notice:  Trying to get property of non-object in /var/www/html/runTestQuery.php on line 96
+[12-Jul-2022 14:52:14 UTC] PHP Notice:  Trying to get property of non-object in /var/www/html/runTestQuery.php on line 96
+[12-Jul-2022 14:52:15 UTC] PHP Fatal error:  Uncaught exception 'mysqli_sql_exception' with message 'Incorrect column name ''' in /var/www/html/runTestQuery.php:184
+Stack trace:
+#0 /var/www/html/runTestQuery.php(184): mysqli->query('\r\n            C...')
+#1 {main}
+  thrown in /var/www/html/runTestQuery.php on line 184
+[12-Jul-2022 14:53:31 UTC] PHP Notice:  Trying to get property of non-object in /var/www/html/runTestQuery.php on line 96
+[12-Jul-2022 14:53:31 UTC] PHP Notice:  Trying to get property of non-object in /var/www/html/runTestQuery.php on line 96
+[12-Jul-2022 14:53:31 UTC] PHP Notice:  Trying to get property of non-object in /var/www/html/runTestQuery.php on line 96
+[12-Jul-2022 14:53:32 UTC] PHP Fatal error:  Uncaught exception 'mysqli_sql_exception' with message 'Incorrect parameter count in the call to native function 'CONCAT'' in /var/www/html/runTestQuery.php:184
+Stack trace:
+#0 /var/www/html/runTestQuery.php(184): mysqli->query('\r\n            C...')
+#1 {main}
+  thrown in /var/www/html/runTestQuery.php on line 184
+[12-Jul-2022 14:53:58 UTC] PHP Notice:  Trying to get property of non-object in /var/www/html/runTestQuery.php on line 96
+[12-Jul-2022 14:53:58 UTC] PHP Notice:  Trying to get property of non-object in /var/www/html/runTestQuery.php on line 96
+[12-Jul-2022 14:53:58 UTC] PHP Notice:  Trying to get property of non-object in /var/www/html/runTestQuery.php on line 96
+[12-Jul-2022 14:54:01 UTC] PHP Fatal error:  Uncaught exception 'mysqli_sql_exception' with message 'Column count doesn't match value count at row 1' in /var/www/html/runTestQuery.php:242
+Stack trace:
+#0 /var/www/html/runTestQuery.php(242): mysqli->query('\r\n             ...')
+#1 {main}
+  thrown in /var/www/html/runTestQuery.php on line 242
+[12-Jul-2022 14:55:43 UTC] PHP Notice:  Trying to get property of non-object in /var/www/html/runTestQuery.php on line 96
+[12-Jul-2022 14:55:43 UTC] PHP Notice:  Trying to get property of non-object in /var/www/html/runTestQuery.php on line 96
+[12-Jul-2022 14:55:43 UTC] PHP Notice:  Trying to get property of non-object in /var/www/html/runTestQuery.php on line 96
+[12-Jul-2022 14:56:43 UTC] PHP Notice:  Trying to get property of non-object in /var/www/html/runTestQuery.php on line 96
+[12-Jul-2022 14:56:43 UTC] PHP Notice:  Trying to get property of non-object in /var/www/html/runTestQuery.php on line 96
+[12-Jul-2022 14:56:43 UTC] PHP Notice:  Trying to get property of non-object in /var/www/html/runTestQuery.php on line 96
+[12-Jul-2022 14:59:11 UTC] PHP Notice:  Trying to get property of non-object in /var/www/html/runTestQuery.php on line 96
+[12-Jul-2022 14:59:11 UTC] PHP Notice:  Trying to get property of non-object in /var/www/html/runTestQuery.php on line 96
+[12-Jul-2022 14:59:11 UTC] PHP Notice:  Trying to get property of non-object in /var/www/html/runTestQuery.php on line 96
